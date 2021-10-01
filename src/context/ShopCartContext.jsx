@@ -3,12 +3,25 @@ import { createContext, useReducer } from "react";
 const ShopCartContext = createContext();
 
 const initialState = {
-    user: "Carlos Aguinaga",
-    cart: []
+  user: "Carlos Aguinaga",
+  totalPrice: 0,
+  cart: [],
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "ADD":
+      return {
+        ...state,
+        totalPrice: state.totalPrice + action.payload.price,
+        cart: [...state.cart, action.payload],
+      };
+    case "REMOVE":
+      return {
+        ...state,
+        totalPrice: state.totalPrice - action.payload.price,
+        cart: state.cart.filter(product => product.id !== action.payload.id)
+      }  
     default:
       return state;
   }

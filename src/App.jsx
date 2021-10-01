@@ -5,6 +5,7 @@ import LoaderPage from "./components/custom/loaderPage/LoaderPage.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ProductListProvider } from "./context/ProductListContext";
 import { ShopCartProvider } from "./context/ShopCartContext";
+import Main from "./layouts/Main";
 
 // import Home from "./views/Home";
 // import Tienda from "./views/Tienda";
@@ -17,22 +18,24 @@ function App() {
       <ProductListProvider>
         <ShopCartProvider>
           <Router>
-            <Switch>
-              <Route path="/" exact>
-                <Suspense fallback={<LoaderPage />}>
-                  <Home />
-                </Suspense>
-              </Route>
+            <Main>
+              <Switch>
+                <Route path="/" exact>
+                  <Suspense fallback={<LoaderPage />}>
+                    <Home />
+                  </Suspense>
+                </Route>
 
-              <Route path="/shop-acart" exact>
-                <Suspense fallback={<LoaderPage />}>
-                  <ShopCart />
-                </Suspense>
-              </Route>
-              <Route path="*">
-                <h1>404 Not Found</h1>
-              </Route>
-            </Switch>
+                <Route path="/shop-cart" exact>
+                  <Suspense fallback={<LoaderPage />}>
+                    <ShopCart />
+                  </Suspense>
+                </Route>
+                <Route path="*">
+                  <h1>404 Not Found</h1>
+                </Route>
+              </Switch>
+            </Main>
           </Router>
         </ShopCartProvider>
       </ProductListProvider>

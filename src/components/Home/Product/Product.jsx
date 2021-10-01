@@ -1,20 +1,35 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Product.styles.css";
 import { Card, Button } from "react-bootstrap";
 import { ShopCartContext } from "../../../context/ShopCartContext";
 
-const Product = ({name, description, price, id, img}) => {
+const Product = ({ name, description, price, id, img, status }) => {
+  const { state, dispatch } = useContext(ShopCartContext);
 
-    const {state, dispatch} = useContext(ShopCartContext)
+  const [payload, setPayload] = useState({});
+
+  useEffect(() => {
+    setPayload({ name, description, price, id, img, status });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleDispatch = (payload) => {
+    (dispatch({ type: "ADD", payload }))
+  }
+
 
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
-        <Card.Text>{description}
-        </Card.Text>
-        <Button variant="primary">$ {price}</Button>
+        <Card.Text>{description}</Card.Text>
+        <Button
+          variant={"primary"}
+          onClick={ () => handleDispatch(payload)}
+        >
+          $ {price}
+        </Button>
       </Card.Body>
     </Card>
   );
