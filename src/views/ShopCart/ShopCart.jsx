@@ -1,17 +1,14 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-// import Product from "../../components/Home/Product/Product";
 import { ShopCartContext } from "../../context/ShopCartContext";
 import "./ShopCart.styles.css";
 import { Button } from "react-bootstrap";
 import TableCart from "../../layouts/TableCart";
 
 const ShopCart = () => {
-  const { state } = useContext(ShopCartContext);
+  const { state, dispatch } = useContext(ShopCartContext);
 
   return (
     <>
-      <Link to="/">Go back</Link>
       <TableCart>
         {state.cart.map((product, index) => (
           <tr key={index}>
@@ -27,18 +24,16 @@ const ShopCart = () => {
             <td>{product.description}</td>
             <td>{product.price}</td>
             <td>
-              <Button variant="danger">Remove</Button>
+              <Button
+                variant="danger"
+                onClick={() =>
+                  dispatch({ type: "REMOVE", payload: {id: product.id, name: product.name, price: product.price} })
+                }
+              >
+                Remove
+              </Button>
             </td>
           </tr>
-          // <Product
-          //   key={product.id}
-          //   name={product.name}
-          //   description={product.desc}
-          //   price={product.price}
-          //   id={product.id}
-          //   img={product.img}
-          //   status={"delete"}
-          // />
         ))}
       </TableCart>
     </>
