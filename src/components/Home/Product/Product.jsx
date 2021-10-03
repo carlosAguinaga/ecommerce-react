@@ -17,10 +17,10 @@ const Product = ({ name, description, price, id, img, status }) => {
     (dispatch({ type: "ADD", payload }))
   }
 
-
+  console.log(img);
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={img} />
+      <Card.Img variant="top" src={`http://localhost:1337${img.url}`} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
