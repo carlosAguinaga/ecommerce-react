@@ -1,38 +1,31 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useReducer } from "react";
 
-const UserContext = createContext()
+const UserContext = createContext();
 
 const initialState = {
-    user: "",
-    password: "",
-    isOnSession: false
-}
+  user: {},
+};
 
 const reducer = (state, action) => {
-    switch (action.type) {
-        case "SUCCESS":
-            return {
-                user: action.payload.user,
-                email: action.payload.email,
-                isOnSession: true
-            }
-    
-        default:
-            return state
-    }
-}
 
-const UserProvider = ({children}) => {
+  switch (action.type) {
+    case "SUCCESS":
+      return {
+        ...state,
+        user: action.payload,
+      };
 
-    const [state, dispatch] = useReducer(reducer, initialState)
+    default:
+      return state;
+  }
+};
 
-    const data = {state, dispatch}
+const UserProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-    return (
-        <UserContext.Provider value={data}>
-            {children}
-        </UserContext.Provider>
-    )
-}
+  const data = { state, dispatch };
 
-export {UserContext, UserProvider}
+  return <UserContext.Provider value={data}>{children}</UserContext.Provider>;
+};
+
+export { UserContext, UserProvider };

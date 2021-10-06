@@ -7,6 +7,7 @@ import { ProductListProvider } from "./context/ProductListContext";
 import { ShopCartProvider } from "./context/ShopCartContext";
 import { UserProvider } from "./context/UserContext";
 import Main from "./layouts/Main";
+import MyAccount from "./views/MyAccount/MyAccount";
 
 // import Home from "./views/Home";
 // import Tienda from "./views/Tienda";
@@ -37,6 +38,11 @@ function App() {
                   <Route path="/login" exact>
                     <Suspense fallback={<LoaderPage />}>
                       <LoginForm />
+                    </Suspense>
+                  </Route>
+                  <Route path="/account" exact>
+                    <Suspense fallback={<LoaderPage />}>
+                      <MyAccount />
                     </Suspense>
                   </Route>
                   <Route path="*">

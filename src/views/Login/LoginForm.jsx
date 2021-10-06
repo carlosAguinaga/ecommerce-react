@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Formik } from "formik";
 import "./LoginForm.styles.css";
+import axios from "axios";
 import { UserContext } from "../../context/UserContext";
 import { useHistory } from "react-router";
 
@@ -30,32 +31,21 @@ const LoginForm = () => {
     return errors;
   };
 
-  const handleSubmit = (values, { setSubmitting }) => {
-    if (auth.email === values.email && auth.password === values.password) {
-      dispatch({
-        type: "SUCCESS",
-        payload: { user: auth.user, email: auth.email, isOnSession: true },
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const response = await axios.post("http://localhost:1337/auth/local", {
+        identifier: values.email,
+        password: values.password,
       });
 
-      history.push("/");
-    } else {
-      alert("Wrong credentials");
+      if (response.data) {
+        dispatch({ type: "SUCCESS", payload: response.data });
+        history.push('/')
+        console.log('paso el push');
+      }
+    } catch (error) {
+      alert("identifire or data is invalid.");
     }
-    
-     // try {
-    //   const response = await fetch(URL, {
-    //     method: "POST",
-    //     body: {
-    //       email: initialValues.email,
-    //       password: initialValues.password
-    //     }
-    //   });
-    //   const result = await response.json();
-    //   console.log(result)
-    // } catch (error) {
-    //     console.log(error)
-    // }
-
   };
 
   return (
