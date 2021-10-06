@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ProductListContext } from "../../context/ProductListContext";
-import Product from "../../components/Home/Product/Product";
+import ProductItem from "../../components/ProductItem/ProductItem";
 import "./Home.styles.css";
 import { ShopCartContext } from "../../context/ShopCartContext";
 import {Link} from 'react-router-dom'
@@ -23,7 +23,7 @@ const Home = () => {
         {listState &&
           listState.products &&
           listState.products.map((product) => (
-            <Product
+            <ProductItem
               key={product.id}
               name={product.name}
               description={product.desc}

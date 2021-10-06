@@ -1,0 +1,9 @@
+
+.product-card {
+    width: 18rem;
+}
+
+.product-card:hover {
+    /* width: 28rem; */
+}
+

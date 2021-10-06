@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./Product.styles.css";
+import "./ProductItem.styles.css";
 import { Card, Button } from "react-bootstrap";
-import { ShopCartContext } from "../../../context/ShopCartContext";
+import { ShopCartContext } from "../../context/ShopCartContext";
 
-const Product = ({ name, description, price, id, img }) => {
+const ProductItem = ({ name, description, price, id, img }) => {
   const { state, dispatch } = useContext(ShopCartContext);
 
   const [payload, setPayload] = useState({});
@@ -19,20 +19,21 @@ const Product = ({ name, description, price, id, img }) => {
 
   console.log(img);
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card className="product-card">
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
+        <span>${price}</span>
         <Button
           variant={"primary"}
           onClick={ () => handleDispatch(payload)}
         >
-          $ {price}
+          Add
         </Button>
       </Card.Body>
     </Card>
   );
 };
 
-export default Product;
+export default ProductItem;

@@ -9,28 +9,56 @@ const initialState = {
       name: 'producto 1',
       desc: 'description 1',
       price: 250,
-      img: 'https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C71AXDEy8WZL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UL1500_.png' 
+      img: './products/product1.jpg' 
     },
     {
       id: 2,
       name: 'producto 2',
       desc: 'description 2',
       price: 200,
-      img: 'https://m.media-amazon.com/images/I/B1MuEgxHlwS._CLa%7C2140%2C2000%7C71FTUN5mcFL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679._SX._UX._SY._UY_.png' 
+      img: './products/product2.jpg' 
     },
     {
       id: 100,
       name: 'producto 3',
       desc: 'description 3',
       price: 400,
-      img: 'https://ih1.redbubble.net/image.32576156.9850/ssrco,classic_tee,mens,5e504c:7bf03840f4,front_alt,square_product,600x600.u4.jpg' 
+      img: './products/product3.jpg' 
     },
     {
       id: 4,
       name: 'producto 4',
       desc: 'description 4',
       price: 350,
-      img: 'https://m.media-amazon.com/images/I/C1xk9V1QWKS._CLa%7C500%2C468%7C71FTUN5mcFL.png%7C0%2C0%2C500%2C468%2B0.0%2C0.0%2C500.0%2C468.0_AC_.png' 
+      img: './products/product4.jpg' 
+    },
+    {
+      id: 5,
+      name: 'producto 5',
+      desc: 'description 5',
+      price: 350,
+      img: './products/product5.jpg' 
+    },
+    {
+      id: 6,
+      name: 'producto 6',
+      desc: 'description 6',
+      price: 350,
+      img: './products/product6.jpg' 
+    },
+    {
+      id: 7,
+      name: 'producto 7',
+      desc: 'description 7',
+      price: 350,
+      img: './products/product7.jpg' 
+    },
+    {
+      id: 8,
+      name: 'producto 8',
+      desc: 'description 8',
+      price: 350,
+      img: './products/product8.jpg' 
     },
   ],
 };
