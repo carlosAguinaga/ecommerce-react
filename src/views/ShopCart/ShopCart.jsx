@@ -16,9 +16,9 @@ const ShopCart = () => {
             <td>{product.name}</td>
             <td>
               <img
-                src={`http://localhost:1337${product.img.url}`}
+                src={product.img}
                 alt={product.name}
-                style={{ maxWidth: "50%" }}
+                style={{ maxWidth: "10%" }}
               />
             </td>
             <td>{product.description}</td>

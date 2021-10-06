@@ -28,8 +28,7 @@ const Header = ({ cart, total, session }) => {
             </span>
           </Navbar.Text>
 
-          {
-          session.user.jwt? (
+          {/* {session.user.jwt ? (
             <Nav.Link as={Link} to="/account" className="header-link">
               welcome {session.user.user.username}
             </Nav.Link>
@@ -37,15 +36,7 @@ const Header = ({ cart, total, session }) => {
             <Nav.Link as={Link} to="/login" className="header-link">
               Log in
             </Nav.Link>
-          )
-          }
-
-
-
-
-          {/* <Nav.Link as={Link} to="/login" className="header-link">
-            Log in
-          </Nav.Link> */}
+          )} */}
         </Nav>
       </Container>
     </Navbar>

@@ -3,13 +3,13 @@ import "./Product.styles.css";
 import { Card, Button } from "react-bootstrap";
 import { ShopCartContext } from "../../../context/ShopCartContext";
 
-const Product = ({ name, description, price, id, img, status }) => {
+const Product = ({ name, description, price, id, img }) => {
   const { state, dispatch } = useContext(ShopCartContext);
 
   const [payload, setPayload] = useState({});
 
   useEffect(() => {
-    setPayload({ name, description, price, id, img, status });
+    setPayload({ name, description, price, id, img });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -20,7 +20,7 @@ const Product = ({ name, description, price, id, img, status }) => {
   console.log(img);
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={`http://localhost:1337${img.url}`} />
+      <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
