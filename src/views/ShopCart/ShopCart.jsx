@@ -21,6 +21,7 @@ const ShopCart = () => {
                 style={{ maxWidth: "10%" }}
               />
             </td>
+            <td>{product.quantity}</td>
             <td>{product.description}</td>
             <td>{product.price}</td>
             <td>

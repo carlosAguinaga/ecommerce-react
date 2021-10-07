@@ -16,6 +16,7 @@ const TableCart = ({ children }) => {
             <th>#</th>
             <th>Product Name</th>
             <th>Product Image</th>
+            <th>Quantity</th>
             <th>Description</th>
             <th>$</th>
             <th>Actions</th>

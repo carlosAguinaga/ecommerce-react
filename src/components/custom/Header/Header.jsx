@@ -1,32 +1,26 @@
 import React from "react";
 import "./Header.styles.css";
-import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Header = ({ cart, total, session }) => {
   return (
-    <Navbar variant="dark" bg="dark">
-      <Container>
-        <Navbar.Brand as={Link} to="/">
-          inicio
-        </Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link as={Link} to="/" className="header-link">
+    <nav className="header">
+      <div>
+        <Link to="/">logo</Link>
+        <ul className="me-auto">
+          <Link to="/" className="header-link">
             Home
-          </Nav.Link>
-          <Nav.Link as={Link} to="/" className="header-link">
+          </Link>
+          <Link to="/" className="header-link">
             Checkout
-          </Nav.Link>
+          </Link>
 
-          <Navbar.Text as={Link} to="/shop-cart" className="header-link">
+          <Link as={Link} to="/shop-cart" className="header-link">
             Cart: {cart.length}
-          </Navbar.Text>
-
-          <Navbar.Text>
-            <span className="header-link">
-              Total: {total > 0 ? "$" + total : "$0"}
-            </span>
-          </Navbar.Text>
+          </Link>
+          <span className="header-link">
+            Total: {total > 0 ? "$" + total : "$0"}
+          </span>
 
           {/* {session.user.jwt ? (
             <Nav.Link as={Link} to="/account" className="header-link">
@@ -37,9 +31,9 @@ const Header = ({ cart, total, session }) => {
               Log in
             </Nav.Link>
           )} */}
-        </Nav>
-      </Container>
-    </Navbar>
+        </ul>
+      </div>
+    </nav>
   );
 };
 

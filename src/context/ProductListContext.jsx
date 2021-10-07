@@ -9,6 +9,7 @@ const initialState = {
       name: 'producto 1',
       desc: 'description 1',
       price: 250,
+      stock: 6,
       img: './products/product1.jpg' 
     },
     {
@@ -16,13 +17,15 @@ const initialState = {
       name: 'producto 2',
       desc: 'description 2',
       price: 200,
+      stock: 5,
       img: './products/product2.jpg' 
     },
     {
-      id: 100,
+      id: 3,
       name: 'producto 3',
       desc: 'description 3',
       price: 400,
+      stock: 6,
       img: './products/product3.jpg' 
     },
     {
@@ -30,6 +33,7 @@ const initialState = {
       name: 'producto 4',
       desc: 'description 4',
       price: 350,
+      stock: 3,
       img: './products/product4.jpg' 
     },
     {
@@ -37,6 +41,7 @@ const initialState = {
       name: 'producto 5',
       desc: 'description 5',
       price: 350,
+      stock: 8,
       img: './products/product5.jpg' 
     },
     {
@@ -44,6 +49,7 @@ const initialState = {
       name: 'producto 6',
       desc: 'description 6',
       price: 350,
+      stock: 4,
       img: './products/product6.jpg' 
     },
     {
@@ -51,6 +57,7 @@ const initialState = {
       name: 'producto 7',
       desc: 'description 7',
       price: 350,
+      stock: 5,
       img: './products/product7.jpg' 
     },
     {
@@ -58,6 +65,7 @@ const initialState = {
       name: 'producto 8',
       desc: 'description 8',
       price: 350,
+      stock: 7,
       img: './products/product8.jpg' 
     },
   ],

@@ -1,38 +1,46 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./ProductItem.styles.css";
-import { Card, Button } from "react-bootstrap";
 import { ShopCartContext } from "../../context/ShopCartContext";
+import { useHistory } from "react-router";
 
 const ProductItem = ({ name, description, price, id, img }) => {
   const { state, dispatch } = useContext(ShopCartContext);
 
+  const history = useHistory()
+
   const [payload, setPayload] = useState({});
 
   useEffect(() => {
-    setPayload({ name, description, price, id, img });
+    setPayload({ name, description, price, id, img, quantity: 1 });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleDispatch = (payload) => {
     (dispatch({ type: "ADD", payload }))
+
   }
 
-  console.log(img);
+  const handleClickItem = (payload) => {
+    history.push(`/product/${id}`)
+  }
+
   return (
-    <Card className="product-card">
-      <Card.Img variant="top" src={img} />
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+    <div className="product-card">
+      <div className="image-container">
+      <img variant="top" src={img} onClick={handleClickItem} className="card-image" alt={name}/>
+      </div>
+      <div className="card-description">
+        <h2 className="card-title" onClick={handleClickItem}>{name}</h2>
+        <p>{description}</p>
         <span>${price}</span>
-        <Button
+        <button
           variant={"primary"}
           onClick={ () => handleDispatch(payload)}
         >
           Add
-        </Button>
-      </Card.Body>
-    </Card>
+        </button>
+      </div>
+    </div>
   );
 };
 

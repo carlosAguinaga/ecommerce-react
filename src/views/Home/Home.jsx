@@ -13,13 +13,13 @@ const Home = () => {
   const [cart, setCart] = useState([{}]);
 
   return (
-    <div>
+    <div className="container">
       <h1 className="title">Home</h1>
       <p className="title">total: {cartState.totalPrice}</p>
       <p className="title">products: {cartState.cart.length}</p>
       <Link to="/shop-cart">Shopping cart</Link>
       <hr />
-      <div className="product-list">
+      <div className="product-grid">
         {listState &&
           listState.products &&
           listState.products.map((product) => (

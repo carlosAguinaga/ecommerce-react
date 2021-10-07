@@ -1,12 +1,18 @@
+
+.home-container {
+
+}
+
+
 .title {
     padding: 1rem;
 }
 
-.product-list {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.product-grid {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    grid-auto-rows: 500px;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
 }

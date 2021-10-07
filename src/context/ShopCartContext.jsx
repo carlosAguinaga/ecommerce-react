@@ -8,20 +8,38 @@ const initialState = {
   cart: [],
 };
 
+const getUpdatedCart = (product, action, state) => {
+
+  if (!product) {
+    return [...state.cart, action.payload];
+  }
+
+  return state.cart.map((p) => {
+    if (p.id === product.id) {
+      const obj = { ...p };
+      obj.quantity++;
+      return obj;
+    }
+    return p;
+  });
+};
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD":
+      const product = state.cart.find((p) => p.id === action.payload.id);
       return {
         ...state,
         totalPrice: state.totalPrice + action.payload.price,
-        cart: [...state.cart, action.payload],
+        cart: getUpdatedCart(product, action, state),
       };
+
     case "REMOVE":
       return {
         ...state,
         totalPrice: state.totalPrice - action.payload.price,
-        cart: state.cart.filter(product => product.id !== action.payload.id)
-      }  
+        cart: state.cart.filter((product) => product.id !== action.payload.id),
+      };
     default:
       return state;
   }
