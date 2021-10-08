@@ -13,6 +13,6 @@
     display: grid;
     gap: 2rem;
     justify-items: center;
-    grid-auto-rows: 500px;
+    grid-auto-rows: 600px;
     grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
 }

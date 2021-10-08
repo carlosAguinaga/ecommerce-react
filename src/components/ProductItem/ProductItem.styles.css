@@ -4,10 +4,9 @@
   overflow: hidden;
 }
 
-
 .image-container {
-    height: 60%;
-    overflow: hidden;
+  height: 60%;
+  overflow: hidden;
 }
 
 .card-image {
@@ -33,4 +32,9 @@
 }
 .card-title:hover {
   color: aqua;
+}
+
+.item_added {
+  color:lightgreen;
+  border: solid 2px lightgreen
 }
