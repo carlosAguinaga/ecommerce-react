@@ -56,7 +56,7 @@ const reducer = (state, action) => {
     case "REMOVE":
       return {
         ...state,
-        totalPrice: state.totalPrice - action.payload.price,
+        totalPrice: state.totalPrice - (action.payload.price * action.payload.quantity),
         cart: state.cart.filter((product) => product.id !== action.payload.id),
       };
     case "REMOVE_UNIT":

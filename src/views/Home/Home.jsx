@@ -19,7 +19,7 @@ const Home = () => {
             <ProductItem
               key={product.id}
               name={product.name}
-              description={product.desc}
+              description={product.description}
               price={product.price}
               id={product.id}
               img={product.img}

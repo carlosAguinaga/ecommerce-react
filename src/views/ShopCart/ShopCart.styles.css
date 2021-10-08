@@ -1,9 +1,5 @@
 
-.product-list {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.cart-container{
+    display: grid;
+    grid-template-columns: 70% 30%;
 }

@@ -11,9 +11,6 @@ const Header = ({ cart, total, session }) => {
           <Link to="/" className="header-link">
             Home
           </Link>
-          <Link to="/" className="header-link">
-            Checkout
-          </Link>
 
           <Link as={Link} to="/shop-cart" className="header-link">
             Cart: {cart.length}

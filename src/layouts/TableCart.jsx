@@ -7,7 +7,7 @@ const TableCart = ({ children }) => {
   const { state } = useContext(ShopCartContext);
 
   return (
-    <div style={{ width: "60", margin: "auto", marginTop: 30, textAlign: "center" }}>
+    <div style={{ width: "60", margin: "auto", marginTop: 30, textAlign: "center"}}>
       
       {state.cart.length > 0 ? (
         <Table striped bordered hover>
