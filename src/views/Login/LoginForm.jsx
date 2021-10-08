@@ -5,18 +5,19 @@ import axios from "axios";
 import { UserContext } from "../../context/UserContext";
 import { useHistory } from "react-router";
 
-const auth = {
-  user: "Carlos",
-  email: "carlos@carlos.com",
-  password: "carlos",
-};
+// const auth = {
+//   user: "Carlos",
+//   email: "carlos@carlos.com",
+//   password: "carlos",
+// };
 
 const LoginForm = () => {
   const { dispatch } = useContext(UserContext);
 
   const history = useHistory();
 
-  const [initialValues, setInitialValues] = useState({
+  // const [initialValues, setInitialValues] = useState({
+  const [initialValues] = useState({
     email: "Daniel",
     password: "",
   });

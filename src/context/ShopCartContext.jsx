@@ -10,7 +10,6 @@ const initialState = {
 
 const getPlusItemCart = (state, action ) => {
 
-  console.log(action)
   const product = state.cart.find((p) => p.id === action.payload.id)
 
   return state.cart.map((p) => {
@@ -38,8 +37,10 @@ const getRemoveItemCart = (state, action) => {
 };
 
 const reducer = (state, action) => {
+
   switch (action.type) {
     case "ADD":
+
       return {
         ...state,
         totalPrice: state.totalPrice + action.payload.price,

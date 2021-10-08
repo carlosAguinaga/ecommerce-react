@@ -71,10 +71,30 @@ const initialState = {
   ],
 };
 
+
+const decreaseProductStock = (state, action) => {
+  const productToDecrease = state.products.find(p => p.id ===  action.payload.id);
+  const obj = { ...productToDecrease }
+  if (obj.stock > 0) {
+    obj.stock--
+  }
+  return state.products.map( p => p.id === action.payload.id? obj : p)
+}
+const incrementProductStock = (state, action) => {
+  const productToIncrement = state.products.find(p => p.id ===  action.payload.id);
+  const obj = { ...productToIncrement }
+    obj.stock++
+  return state.products.map( p => p.id === action.payload.id? obj : p)
+}
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_PRODUCTS":
       return { ...state, products:action.payload };
+    case "DECREASE_STOCK":
+      return { ...state, products: decreaseProductStock(state, action) };
+    case "ADD_UNIT_STOCK":
+      return { ...state, products: incrementProductStock(state, action) };
     default:
       return state;
   }
@@ -83,6 +103,7 @@ const reducer = (state, action) => {
 const ProductListProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
+
 
   // useEffect(() => {
   //   const getFetch = async () => {
@@ -99,7 +120,7 @@ const ProductListProvider = ({ children }) => {
   // }, []);
 
   
-  const data = { state };
+  const data = { state, dispatch };
 
   return (
     <ProductListContext.Provider value={data}>
