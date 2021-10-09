@@ -6,9 +6,10 @@ import LoaderPage from "./components/custom/loaderPage/LoaderPage.jsx";
 import { ProductListProvider } from "./context/ProductListContext";
 import { ShopCartProvider } from "./context/ShopCartContext";
 import { UserProvider } from "./context/UserContext";
-import Main from "./layouts/Main";
+
 import MyAccount from "./views/MyAccount/MyAccount";
 import ProductDetail from "./views/ProductDetail/ProductDetail";
+import Main from "./layouts/Main/Main";
 
 
 // import Home from "./views/Home";

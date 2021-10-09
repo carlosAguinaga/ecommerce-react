@@ -80,10 +80,12 @@ const decreaseProductStock = (state, action) => {
   }
   return state.products.map( p => p.id === action.payload.id? obj : p)
 }
+
 const incrementProductStock = (state, action) => {
+  // aqui
   const productToIncrement = state.products.find(p => p.id ===  action.payload.id);
   const obj = { ...productToIncrement }
-    obj.stock++
+    obj.stock+= action.payload.numItems
   return state.products.map( p => p.id === action.payload.id? obj : p)
 }
 

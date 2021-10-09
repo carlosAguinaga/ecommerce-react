@@ -16,7 +16,7 @@ const useLessPlusItemCart = ( id ) => {
   //Functions
   const handleAddDispatch = () => {
     productDispatch({ type: "DECREASE_STOCK", payload: { id } });
-    
+
     cartDispatch({
       type: "ADD",
       payload: {
@@ -31,6 +31,7 @@ const useLessPlusItemCart = ( id ) => {
   };
 
   const handleRemoveDispatch = () => {
+    productDispatch({ type: "ADD_UNIT_STOCK", payload: { id, numItems: productCart.quantity } });
     cartDispatch({
       type: "REMOVE",
       payload: { id, price: productItem.price, quantity: productCart.quantity },
@@ -38,11 +39,11 @@ const useLessPlusItemCart = ( id ) => {
   };
 
   const handleRemoveItemDispatch = () => {
-    productDispatch({ type: "ADD_UNIT_STOCK", payload: { id } });
     if (productCart.quantity === 1) {
       // eliminar el producto
       return handleRemoveDispatch();
     }
+    productDispatch({ type: "ADD_UNIT_STOCK", payload: { id, numItems: 1 } });
     cartDispatch({ type: "REMOVE_UNIT", payload: { id, price: productItem.price } });
   };
 

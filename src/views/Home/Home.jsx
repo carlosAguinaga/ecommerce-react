@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { ProductListContext } from "../../context/ProductListContext";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import "./Home.styles.css";
-import {Link} from 'react-router-dom'
 
 const Home = () => {
   // Context del listado de productos
@@ -10,7 +9,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <Link to="/shop-cart">Shopping cart</Link>
+      <h1 className="title">All Products</h1>
       <hr />
       <div className="product-grid">
         {listState &&

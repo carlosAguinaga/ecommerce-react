@@ -48,7 +48,7 @@ const ProductItem = ({ name, description, price, id, img }) => {
             <span>{productCart.quantity}</span>
             <button
               onClick={handleAddItemDispatch}
-              disabled={productItem.stock === 0}
+              disabled={productItem.stock <= 0}
             >
               +
             </button>
