@@ -23,9 +23,10 @@ const ShopCart = () => {
               />
             ))}
           </div>
-          <div>
-            <p>checkout</p>
-            <button>pagar</button>
+          <div className="detail-cart-container"> 
+            <h2 className="text-total-title">Total</h2>
+            <p className="price-total-detail">${state.totalPrice}</p>
+            <button className="btn-primary btn-cart-detail">Go to checkout</button>
           </div>
         </div>
       ) : (

@@ -4,7 +4,9 @@
     align-items: center;
     grid-template-columns: 1fr 2fr 1fr;
     padding: 20px;
-    border: solid 2px red
+    border: solid 2px var(--primaryColor);
+    margin-bottom: 15px;
+    border-radius: 6px;
 }
 
 .image-cart-item {
@@ -25,11 +27,16 @@
 }
 
 .config-buttons .text-out-stock {
-    color: red;
+    color: var(--redAccent);
     font-weight: 600;
 }
 
+.cart-product-units {
+    margin: 0 10px;
+}
 
-/* .cart-item-container .btn-remove-item {
-    margin-bottom: 20px;
-} */
+.ic-remove-item {
+    color: var(--secondaryColor);
+    font-size: 30px;
+    cursor: pointer;
+}

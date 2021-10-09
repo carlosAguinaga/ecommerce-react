@@ -1,5 +1,6 @@
 .product-card {
   width: 100%;
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   overflow: hidden;
 }
@@ -38,12 +39,13 @@
   border-radius: 3px;
   font-weight: 400;
   padding: 2px;
-  color: #31df4e;
-  border: solid 3px #31df4e;
+  color: var(--greenAccent);
+  border: solid 3px var(--greenAccent);
 }
 
 .card-price {
   display: block;
+  color: var(--secondaryColor);
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -61,6 +63,6 @@
 }
 
 .text-out-card {
-  color: red;
+  color: var(--redAccent);
   font-weight: bold;
 }

@@ -1,5 +1,9 @@
 :root {
-  --primaryColor: #70C1B3
+  /* --primaryColor: #70C1B3; */
+  --primaryColor: #5a3d22;
+  --secondaryColor: #835830;
+  --greenAccent: #568548;
+  --redAccent: #e93d68;
 }
 
 .App {

@@ -3,3 +3,27 @@
     display: grid;
     grid-template-columns: 70% 30%;
 }
+
+.detail-cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-total-title {
+    font-size: 30px;
+    margin: 2px;
+}
+
+.price-total-detail {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 2px 0 20px 0;
+    color: var(--secondaryColor)
+}
+
+.btn-cart-detail {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 15px;
+}

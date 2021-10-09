@@ -20,10 +20,11 @@
 }
 
 .text-out {
-    color: red;
+    color: var(--redAccent);
     font-weight: bold;
 }
 .price-description {
+    color: var(--secondaryColor);
     font-size: 28px;
     font-weight: 600;
 }
