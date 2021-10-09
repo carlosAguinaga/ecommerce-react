@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import ProductCartItem from "../../components/ProductCartItem/ProductCartItem";
 import { ShopCartContext } from "../../context/ShopCartContext";
 import "./ShopCart.styles.css";
 
 const ShopCart = () => {
   const { state } = useContext(ShopCartContext);
+  const history = useHistory()
 
   return (
     <>
@@ -23,14 +24,18 @@ const ShopCart = () => {
               />
             ))}
           </div>
-          <div className="detail-cart-container"> 
+          <div className="detail-cart-container">
             <h2 className="text-total-title">Total</h2>
             <p className="price-total-detail">${state.totalPrice}</p>
-            <button className="btn-primary btn-cart-detail">Go to checkout</button>
+            <button className="btn-primary btn-cart-detail" onClick={()=> history.push('/checkout')}>
+              Go to checkout
+            </button>
           </div>
         </div>
       ) : (
-        <Link to="/">Cart empty, go to home</Link>
+        <div className="text-empty-detail">
+          <Link to="/">Cart empty, go to home</Link>
+        </div>
       )}
     </>
   );

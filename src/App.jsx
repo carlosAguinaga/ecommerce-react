@@ -2,14 +2,12 @@ import "./App.css";
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoaderPage from "./components/custom/loaderPage/LoaderPage.jsx";
-// import "bootstrap/dist/css/bootstrap.min.css";
 import { ProductListProvider } from "./context/ProductListContext";
 import { ShopCartProvider } from "./context/ShopCartContext";
 import { UserProvider } from "./context/UserContext";
-
-import MyAccount from "./views/MyAccount/MyAccount";
 import ProductDetail from "./views/ProductDetail/ProductDetail";
 import Main from "./layouts/Main/Main";
+import ProductCheckout from "./views/productCheckout/ProductCheckout";
 
 
 // import Home from "./views/Home";
@@ -43,14 +41,15 @@ function App() {
                       <ShopCart />
                     </Suspense>
                   </Route>
+                  <Route path="/checkout" exact>
+                    <Suspense fallback={<LoaderPage />}>
+                      <ProductCheckout/>
+                    </Suspense>
+                  </Route>
+
                   <Route path="/login" exact>
                     <Suspense fallback={<LoaderPage />}>
                       <LoginForm />
-                    </Suspense>
-                  </Route>
-                  <Route path="/account" exact>
-                    <Suspense fallback={<LoaderPage />}>
-                      <MyAccount />
                     </Suspense>
                   </Route>
                   <Route path="*">

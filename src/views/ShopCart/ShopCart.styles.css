@@ -27,3 +27,8 @@
     font-weight: bold;
     padding: 10px 15px;
 }
+
+.text-empty-detail{
+    display: flex;
+    justify-content: center;
+}
