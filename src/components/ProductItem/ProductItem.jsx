@@ -34,7 +34,7 @@ const ProductItem = ({ name, description, price, id, img }) => {
         <h2 className="card-title" onClick={handleClickItem}>
           {name}
         </h2>
-        <p>{description}</p>
+        <p className="card-subtite">{description}</p>
 
         {productItem?.stock <= 0 && (
           <p className="text-out-card">Out of stock</p>

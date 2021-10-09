@@ -22,7 +22,7 @@ const ProductDetail = () => {
         alt={productItem.name}
         className="image-detail"
       />
-      <div>
+      <div className="description-product-detail">
         <h1>{productItem.name}</h1>
         <p>{productItem.description}</p>
 

@@ -1,13 +1,14 @@
 
 .cart-container{
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 1fr;
 }
 
 .detail-cart-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
 }
 
 .text-total-title {
@@ -31,4 +32,13 @@
 .text-empty-detail{
     display: flex;
     justify-content: center;
+}
+
+@media (min-width: 700px) {
+    
+    .cart-container{
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
 }

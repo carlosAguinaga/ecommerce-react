@@ -10,8 +10,6 @@ import Main from "./layouts/Main/Main";
 import ProductCheckout from "./views/productCheckout/ProductCheckout";
 
 
-// import Home from "./views/Home";
-// import Tienda from "./views/Tienda";
 const Home = lazy(() => import("./views/Home/Home"));
 const ShopCart = lazy(() => import("./views/ShopCart/ShopCart"));
 const LoginForm = lazy(() => import("./views/Login/LoginForm"));
