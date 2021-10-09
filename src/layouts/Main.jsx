@@ -8,7 +8,7 @@ const Main = ({ children }) => {
   const { state: userState } = useContext(UserContext);
 
   return (
-    <>
+    <div>
       <Header
         cart={cartState.cart}
         total={cartState.totalPrice}
@@ -16,7 +16,7 @@ const Main = ({ children }) => {
         session={userState}
       />
       {children}
-    </>
+    </div>
   );
 };
 
