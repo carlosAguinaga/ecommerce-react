@@ -12,3 +12,24 @@
     object-fit: cover;
     justify-self: start;
 }
+
+.btn-go-cart {
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.text-out {
+    color: red;
+    font-weight: bold;
+}
+.price-description {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+.text-unit {
+    margin: 0 10px;
+    font-weight: bold;
+}

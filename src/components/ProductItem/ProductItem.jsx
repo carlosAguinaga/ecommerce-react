@@ -37,16 +37,19 @@ const ProductItem = ({ name, description, price, id, img }) => {
         <p>{description}</p>
 
         {productItem?.stock <= 0 && (
-          <p style={{ color: "red" }}>Out of stock</p>
+          <p className="text-out-card">Out of stock</p>
         )}
 
-        <span>${price}</span>
+        <span className="card-price">${price}</span>
 
         {productCart ? (
           <div>
-            <button onClick={handleRemoveItemDispatch}>-</button>
-            <span>{productCart.quantity}</span>
+            <button className="btn-units" onClick={handleRemoveItemDispatch}>
+              -
+            </button>
+            <span className="card-text-unit">{productCart.quantity}</span>
             <button
+              className="btn-units"
               onClick={handleAddItemDispatch}
               disabled={productItem.stock <= 0}
             >
@@ -55,7 +58,9 @@ const ProductItem = ({ name, description, price, id, img }) => {
           </div>
         ) : (
           <div>
-            <button onClick={() => handleAddDispatch()}>Add to cart</button>
+            <button onClick={() => handleAddDispatch()} className="btn-primary card-btn-primary">
+              Add to cart
+            </button>
           </div>
         )}
 

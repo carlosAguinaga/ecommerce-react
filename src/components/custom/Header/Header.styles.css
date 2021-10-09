@@ -1,9 +1,10 @@
 .header {
-  background-color: black;
+  background-color: var(--primaryColor);
   position: fixed;
   left: 0;
   right: 0;
   z-index: 999;
+  padding: 8px 0;
 }
 
 .navbar {
@@ -12,12 +13,13 @@
   align-items: center;
 }
 
-.right-bar {
-
-}
 
 .header-link {
     color: #fff;
     text-decoration: none;
     margin-right: 20px;
+  }
+
+  .logo-header {
+    width: 50px;
   }

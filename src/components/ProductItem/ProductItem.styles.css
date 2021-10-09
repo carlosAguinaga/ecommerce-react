@@ -5,7 +5,7 @@
 }
 
 .image-container {
-  height: 60%;
+  height: 55%;
   overflow: hidden;
 }
 
@@ -31,10 +31,36 @@
   cursor: pointer;
 }
 .card-title:hover {
-  color: aqua;
+  color: var(--primaryColor);
 }
 
 .item_added {
-  color:lightgreen;
-  border: solid 2px lightgreen
+  border-radius: 3px;
+  font-weight: 400;
+  padding: 2px;
+  color: #31df4e;
+  border: solid 3px #31df4e;
+}
+
+.card-price {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-text-unit {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.card-btn-primary {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 10px;
+}
+
+.text-out-card {
+  color: red;
+  font-weight: bold;
 }

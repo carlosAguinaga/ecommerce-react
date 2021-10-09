@@ -7,7 +7,9 @@ const Header = ({ cart, total, session }) => {
     <nav className="header">
       <div className="container navbar">
         <div>
-          <Link to="/">logo</Link>
+          <Link to="/">
+            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="logo" className="logo-header"/>
+          </Link>
         </div>
         <ul className="right-bar">
           <Link to="/" className="header-link">

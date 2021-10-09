@@ -23,19 +23,20 @@ const ProductDetail = () => {
         className="image-detail"
       />
       <div>
-        <h2>{productItem.name}</h2>
+        <h1>{productItem.name}</h1>
         <p>{productItem.description}</p>
 
         {productItem?.stock <= 0 && (
-          <p style={{ color: "red" }}>Out of stock</p>
+          <p className="text-out">Out of stock</p>
         )}
-        <p>${productItem.price}</p>
+        <p className="price-description">${productItem.price}</p>
 
         {productCart ? (
           <div>
-            <button onClick={handleRemoveItemDispatch}>-</button>
-            <span>{productCart.quantity}</span>
+            <button className="btn-units" onClick={handleRemoveItemDispatch}>-</button>
+            <span className="text-unit">{productCart.quantity}</span>
             <button
+            className="btn-units"
               onClick={handleAddItemDispatch}
               disabled={productItem.stock === 0}
             >
@@ -44,14 +45,12 @@ const ProductDetail = () => {
           </div>
         ) : (
           <div>
-            <button onClick={() => handleAddDispatch()}>Add to cart</button>
+            <button className="btn-primary btn-go-cart" onClick={() => handleAddDispatch()}>Add to cart</button>
           </div>
         )}
 
         {productCart && (
-          <div>
-            <button onClick={() => history.push('/shop-cart')}>go to cart</button>
-          </div>
+            <button  className="btn-secondary btn-go-cart" onClick={() => history.push('/shop-cart')}>Go to cart</button>
         )}
       </div>
     </div>
