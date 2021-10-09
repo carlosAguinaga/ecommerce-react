@@ -1,0 +1,14 @@
+
+.product-detail-cotainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    padding-top: 30px;
+}
+
+.image-detail {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    justify-self: start;
+}

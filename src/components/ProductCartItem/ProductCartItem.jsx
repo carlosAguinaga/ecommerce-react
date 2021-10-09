@@ -4,11 +4,11 @@ import "./ProductCartItem.styles.css";
 
 const ProductCartItem = ({ img, name, description, price, id }) => {
   const {  handleAddItemDispatch, handleRemoveItemDispatch, handleRemoveDispatch, productCart, productItem } =
-    useLessPlusItemCart({ name, description, price, id, img });
+    useLessPlusItemCart( id );
 
   return (
     <div className="cart-item-container">
-      <img src={img} alt={name} className="image-cart-item" />
+      <img src={`${process.env.PUBLIC_URL}${img}`} alt={name} className="image-cart-item" />
       <div>
         <p>{name}</p>
         <p>{description}</p>

@@ -8,7 +8,8 @@ import { ShopCartProvider } from "./context/ShopCartContext";
 import { UserProvider } from "./context/UserContext";
 import Main from "./layouts/Main";
 import MyAccount from "./views/MyAccount/MyAccount";
-import ProductDetail from "./views/Home/ProductDetail/ProductDetail";
+import ProductDetail from "./views/ProductDetail/ProductDetail";
+
 
 // import Home from "./views/Home";
 // import Tienda from "./views/Tienda";

@@ -2,8 +2,7 @@ import { useContext } from "react";
 import { ProductListContext } from "../context/ProductListContext";
 import { ShopCartContext } from "../context/ShopCartContext";
 
-const useLessPlusItemCart = ( {name, description, price, id, img} ) => {
-
+const useLessPlusItemCart = ( id ) => {
   const { state: cartState, dispatch: cartDispatch } =
     useContext(ShopCartContext);
   const { state: productState, dispatch: productDispatch } =
@@ -17,21 +16,25 @@ const useLessPlusItemCart = ( {name, description, price, id, img} ) => {
   //Functions
   const handleAddDispatch = () => {
     productDispatch({ type: "DECREASE_STOCK", payload: { id } });
+    
     cartDispatch({
       type: "ADD",
       payload: {
-        name,
-        description,
-        price,
-        id,
-        img,
+        name: productItem.name,
+        description: productItem.description,
+        price: productItem.price,
+        id: productItem.id,
+        img: productItem.img,
         quantity: productCart ? productCart.quantity : 1,
       },
     });
   };
 
   const handleRemoveDispatch = () => {
-    cartDispatch({ type: "REMOVE", payload: { id, price, quantity :productCart.quantity } });
+    cartDispatch({
+      type: "REMOVE",
+      payload: { id, price: productItem.price, quantity: productCart.quantity },
+    });
   };
 
   const handleRemoveItemDispatch = () => {
@@ -40,12 +43,12 @@ const useLessPlusItemCart = ( {name, description, price, id, img} ) => {
       // eliminar el producto
       return handleRemoveDispatch();
     }
-    cartDispatch({ type: "REMOVE_UNIT", payload: { id, price } });
+    cartDispatch({ type: "REMOVE_UNIT", payload: { id, price: productItem.price } });
   };
 
   const handleAddItemDispatch = () => {
     productDispatch({ type: "DECREASE_STOCK", payload: { id } });
-    cartDispatch({ type: "ADD_UNIT_MORE", payload: { id, price } });
+    cartDispatch({ type: "ADD_UNIT_MORE", payload: { id, price: productItem.price } });
   };
 
   return {
@@ -55,7 +58,6 @@ const useLessPlusItemCart = ( {name, description, price, id, img} ) => {
     handleRemoveItemDispatch,
     productItem,
     productCart,
-
   };
 };
 

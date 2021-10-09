@@ -10,7 +10,7 @@ const initialState = {
       description: 'description 1',
       price: 250,
       stock: 6,
-      img: './products/product1.jpg' 
+      img: '/products/product1.jpg' 
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const initialState = {
       description: 'description 2',
       price: 200,
       stock: 5,
-      img: './products/product2.jpg' 
+      img: '/products/product2.jpg' 
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const initialState = {
       description: 'description 3',
       price: 400,
       stock: 6,
-      img: './products/product3.jpg' 
+      img: '/products/product3.jpg' 
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ const initialState = {
       description: 'description 4',
       price: 100,
       stock: 3,
-      img: './products/product4.jpg' 
+      img: '/products/product4.jpg' 
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ const initialState = {
       description: 'description 5',
       price: 200,
       stock: 8,
-      img: './products/product5.jpg' 
+      img: '/products/product5.jpg' 
     },
     {
       id: 6,
@@ -50,7 +50,7 @@ const initialState = {
       description: 'description 6',
       price: 150,
       stock: 4,
-      img: './products/product6.jpg' 
+      img: '/products/product6.jpg' 
     },
     {
       id: 7,
@@ -58,7 +58,7 @@ const initialState = {
       description: 'description 7',
       price: 240,
       stock: 5,
-      img: './products/product7.jpg' 
+      img: '/products/product7.jpg' 
     },
     {
       id: 8,
@@ -66,7 +66,7 @@ const initialState = {
       description: 'description 8',
       price: 150,
       stock: 7,
-      img: './products/product8.jpg' 
+      img: '/products/product8.jpg' 
     },
   ],
 };
@@ -90,7 +90,7 @@ const incrementProductStock = (state, action) => {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_PRODUCTS":
-      return { ...state, products:action.payload };
+      return { ...state, products: action.payload };
     case "DECREASE_STOCK":
       return { ...state, products: decreaseProductStock(state, action) };
     case "ADD_UNIT_STOCK":
