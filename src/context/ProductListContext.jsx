@@ -7,7 +7,7 @@ let initialState = {
   products: [
     {
       id: 1,
-      name: 'producto 1',
+      name: 'TWS WHIZZER-TP1',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
       price: 250,
       stock: 6,
@@ -15,7 +15,7 @@ let initialState = {
     },
     {
       id: 2,
-      name: 'producto 2',
+      name: 'ELECOM LBT-TWS05',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
       price: 200,
       stock: 5,
@@ -23,7 +23,7 @@ let initialState = {
     },
     {
       id: 3,
-      name: 'producto 3',
+      name: 'Headphone C1 HIFI',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
       price: 400,
       stock: 6,
@@ -31,7 +31,7 @@ let initialState = {
     },
     {
       id: 4,
-      name: 'producto 4',
+      name: 'Headphone Fire-250',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
       price: 100,
       stock: 3,
@@ -39,7 +39,7 @@ let initialState = {
     },
     {
       id: 5,
-      name: 'producto 5',
+      name: 'Marshall Major 2',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
       price: 200,
       stock: 8,
@@ -47,7 +47,7 @@ let initialState = {
     },
     {
       id: 6,
-      name: 'producto 6',
+      name: 'Air-force 1914',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
       price: 150,
       stock: 4,
@@ -55,7 +55,7 @@ let initialState = {
     },
     {
       id: 7,
-      name: 'producto 7',
+      name: 'Old school 47',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
       price: 240,
       stock: 5,
@@ -63,7 +63,7 @@ let initialState = {
     },
     {
       id: 8,
-      name: 'producto 8',
+      name: 'Big B-3',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
       price: 150,
       stock: 7,
