@@ -9,7 +9,7 @@ let initialState = {
       id: 1,
       name: 'TWS WHIZZER-TP1',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
-      price: 250,
+      price: 75,
       stock: 6,
       img: '/products/product1.jpg' 
     },
@@ -17,7 +17,7 @@ let initialState = {
       id: 2,
       name: 'ELECOM LBT-TWS05',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
-      price: 200,
+      price: 90,
       stock: 5,
       img: '/products/product2.jpg' 
     },
@@ -25,7 +25,7 @@ let initialState = {
       id: 3,
       name: 'Headphone C1 HIFI',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
-      price: 400,
+      price: 300,
       stock: 6,
       img: '/products/product3.jpg' 
     },
@@ -33,7 +33,7 @@ let initialState = {
       id: 4,
       name: 'Headphone Fire-250',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
-      price: 100,
+      price: 180,
       stock: 3,
       img: '/products/product4.jpg' 
     },
@@ -41,7 +41,7 @@ let initialState = {
       id: 5,
       name: 'Marshall Major 2',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
-      price: 200,
+      price: 150,
       stock: 8,
       img: '/products/product5.jpg' 
     },
@@ -49,7 +49,7 @@ let initialState = {
       id: 6,
       name: 'Air-force 1914',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
-      price: 150,
+      price: 200,
       stock: 4,
       img: '/products/product6.jpg' 
     },
@@ -57,7 +57,7 @@ let initialState = {
       id: 7,
       name: 'Old school 47',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
-      price: 240,
+      price: 270,
       stock: 5,
       img: '/products/product7.jpg' 
     },
@@ -65,7 +65,7 @@ let initialState = {
       id: 8,
       name: 'Big B-3',
       description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto',
-      price: 150,
+      price: 320,
       stock: 7,
       img: '/products/product8.jpg' 
     },
