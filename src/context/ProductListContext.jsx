@@ -1,8 +1,9 @@
 import { createContext, useReducer } from "react";
+// import {useLocalStorage} from '../hooks/useLocalStorage'
 
 const ProductListContext = createContext();
 
-const initialState = {
+let initialState = {
   products: [
     {
       id: 1,
@@ -104,7 +105,17 @@ const reducer = (state, action) => {
 
 const ProductListProvider = ({ children }) => {
 
+  if (localStorage.getItem("shopState")) {
+    initialState = JSON.parse( localStorage.getItem("shopState") ).productState;
+  }
+
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  const data = { state, dispatch };
+
+
+  // useLocalStorage()
+
 
 
   // useEffect(() => {
@@ -121,8 +132,6 @@ const ProductListProvider = ({ children }) => {
   //   getFetch();
   // }, []);
 
-  
-  const data = { state, dispatch };
 
   return (
     <ProductListContext.Provider value={data}>
